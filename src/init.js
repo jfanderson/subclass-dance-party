@@ -1,5 +1,7 @@
 $(document).ready(function(){
   window.dancers = [];
+  window.blinkyDancers = [];
+  window.trumpDancers = [];
 
   $(".addDancerButton").on("click", function(event){
     /* This function sets up the click handlers for the create-dancer
@@ -27,14 +29,22 @@ $(document).ready(function(){
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
+
     dancers.push(dancer);
+
+    if (dancerMakerFunctionName === "makeBlinkyDancer") {
+      blinkyDancers.push(dancer);
+    } else if (dancerMakerFunctionName === "makeTrumpDancer") {
+      trumpDancers.push(dancer);
+    }
+
     $('body').append(dancer.$node);
   });
 
   var windowWidth = $(window).width();
 
   $(".lineUpButton").on("click", function(event){
-    for (var i = 0; i < dancers.length; i++) {
+    for (var i = 1; i <= dancers.length; i++) {
       if (i % 2) {
         dancers[i].$node.stop(true, true);
         dancers[i].$node.animate({left: "25"});

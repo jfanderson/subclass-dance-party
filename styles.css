@@ -25,3 +25,13 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+.trump{
+  width: 389px;
+  height: 479px;
+  border: 0;
+  background-image: url("TrumpTriumphant.gif");
+}
+
+.another{
+  border:10px solid green;
+}

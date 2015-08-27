@@ -14,7 +14,6 @@ makeDancerTwo.prototype.step = function(){
     // See http://api.jquery.com/category/effects/ for this and
     // other effects you can use on a jQuery-wrapped html tag.
     // debugger;
-    // var curr = this.$node.css("top");
     this.$node.animate({top: '+=100', left: '+=100'});
     this.$node.animate({top: '-=100', left: '+=100'});
     this.$node.animate({top: '-=100', left: '-=100'});

@@ -3,19 +3,6 @@ var makeTrumpDancer = function(top, left, timeBetweenSteps){
   // this.$node = $('<img class="dancer trump">');
   // this.$node.attr("src", "Peanuts_Dancing.gif");
   this.$node.addClass('trump');
-
-
-  this.toggleTrump = function() {
-    this.$node.css('background-image','none');
-    this.$node.css('background-image','url("Peanuts_Dancing.gif")');
-  };
-
-  setInterval(this.toggleTrump.bind(this.$node), 1000);
-
-   // if ($(img).hasClass('trump'))
-   // {
-   //    $(img).removeClass('trump').addClass('trump');
-   // }
 };
 
 makeTrumpDancer.prototype = Object.create(makeDancer.prototype);

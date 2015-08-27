@@ -1,5 +1,14 @@
 var makeBlinkyDancer = function(top, left, timeBetweenSteps){
   makeDancer.call(this, top, left, timeBetweenSteps);
+
+  this.$node.mouseover(function() {
+    $(this).animate({
+      "border-radius": "0px",
+    }, 'fast');
+    // $(this).css({'border-color': 'blue'});
+  });
+
+
 };
 
 makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
@@ -11,6 +20,12 @@ makeBlinkyDancer.prototype.step = function(){
     // toggle() is a jQuery method to show/hide the <span> tag.
     // See http://api.jquery.com/category/effects/ for this and
     // other effects you can use on a jQuery-wrapped html tag.
-    
+    if (this.checkForTrump) {
+      // $(this).css({'border-color': 'blue'});
+    }  
     this.$node.toggle();
-  };
+};
+
+makeBlinkyDancer.prototype.checkForTrump = function() {
+
+}

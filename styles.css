@@ -4,12 +4,15 @@ body, html{
 body{
   margin: 0px;
   background-color:#444;
+  background-image: url('a-charlie-brown-christmas-1965-1080p-bluray-x264-cinefile-mkv_snapshot_09-53_2010-12-21_23-12-21.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton{
+.title, .addDancerButton, .lineUpButton{
   padding:5px 12px;
   float:right;
 }
@@ -21,8 +24,8 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
+  border:20px solid red;
+  border-radius:40px;
   position:absolute;
 }
 .trump{
@@ -33,5 +36,5 @@ body, a:link, a:visited, a:active{
 }
 
 .another{
-  border:10px solid green;
+  border:20px solid green;
 }

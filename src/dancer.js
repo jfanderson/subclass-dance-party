@@ -1,24 +1,28 @@
+
 // Creates and returns a new dancer object that can step
 var makeDancer = function(top, left, timeBetweenSteps){
-  // this.top = top;
-  // this.left = left;
-  // this.timeBetweenSteps = timeBetweenSteps;
+  this.top = top;
+  this.left = left;
+  this.timeBetweenSteps = timeBetweenSteps;
   
   // use jQuery to create an HTML <span> tag
   this.$node = $('<span class="dancer"></span>');
+  // var fn = this;
+  this.step();
 
-  // this.step();   // Can this be called here?????
+  this.setPosition(top, left);
+  console.log(this.$node);
 
   // now that we have defined the dancer object, we can start setting up important parts of it by calling the methods we wrote
   // this one sets the position to some random default point within the body
-  // this.setPosition(top, left);   // Can this be called here?????
-
 };
 
 makeDancer.prototype.step = function(){
     // the basic dancer doesn't do anything interesting at all on each step,
     // it just schedules the next step
-    setTimeout(this.step, timeBetweenSteps);
+    console.log("stepped!");
+    console.log("dancer this: " + this);
+    setTimeout(this.step.bind(this), this.timeBetweenSteps);
   };
 
 makeDancer.prototype.setPosition = function(top, left){

@@ -46,13 +46,13 @@ $(document).ready(function(){
   $(".lineUpButton").on("click", function(event){
     for (var i = 1; i <= dancers.length; i++) {
       if (i % 2) {
-        dancers[i].$node.stop(true, true);
-        dancers[i].$node.animate({left: "25"});
-        dancers[i].$node.animate({top: (40*i)});
+        dancers[i-1].$node.stop(true, true);
+        dancers[i-1].$node.animate({left: "25"});
+        dancers[i-1].$node.animate({top: (40*i)});
       } else {
-        dancers[i].$node.stop(true, true);
-        dancers[i].$node.animate({left: (windowWidth-400)});
-        dancers[i].$node.animate({top: (40*i)});
+        dancers[i-1].$node.stop(true, true);
+        dancers[i-1].$node.animate({left: (windowWidth-400)});
+        dancers[i-1].$node.animate({top: (40*i)});
       }
     }
   });
